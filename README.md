@@ -6,3 +6,13 @@
 
 Docker image for vibe.d
 
+## Run
+
+```
+$ docker run --rm -it -p 8080:8080 simdnyan/vibed
+```
+
+```
+$ curl 0.0.0.0:8080
+Hello, World!
+```
