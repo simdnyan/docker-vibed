@@ -1,4 +1,4 @@
-FROM dlanguage/dmd:2.074.0
+FROM dlanguage/dmd:2.074.1
 MAINTAINER Yoshinori SHIMADA <simd.nyan@gmail.com>
 
 EXPOSE 8080

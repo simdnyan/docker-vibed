@@ -1,4 +1,6 @@
-import vibe.vibe;
+import vibe.core.core;
+import vibe.core.log;
+import vibe.http.server;
 
 void main()
 {
