@@ -1,9 +1,11 @@
-FROM dlanguage/dmd:2.077.0
-MAINTAINER Yoshinori Shimada <simd.nyan@gmail.com>
+FROM dlanguage/dmd:2.079.0
+LABEL maintainer "Yoshinori Shimada <simd.nyan@gmail.com>"
 
 EXPOSE 8080
-ADD src /src
-RUN apt-get update && apt-get install -y libcurl4-gnutls-dev libevent-dev libssl-dev \
- && apt-get upgrade -y && apt-get clean && rm -rf /var/cache/apt /var/lib/apt/lists/* \
+COPY src /src
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends libcurl4-gnutls-dev libevent-dev libssl-dev \
+ && apt-get clean && rm -rf /var/lib/apt/lists/* /var/cache/apt \
  && dub upgrade
-CMD ["dub"]
+
+ENTRYPOINT ["dub"]

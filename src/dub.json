@@ -7,6 +7,5 @@
 		"vibe-d": "~>0.8.2"
 	},
 	"description": "A simple vibe.d server application.",
-	"copyright": "Copyright © 2017, root",
 	"license": "proprietary"
 }
