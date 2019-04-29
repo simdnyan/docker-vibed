@@ -1,5 +1,7 @@
-FROM dlanguage/dmd:2.079.0
+FROM dlanguage/dmd:2.080.0
 LABEL maintainer "Yoshinori Shimada <simd.nyan@gmail.com>"
+
+ENV DEBIAN_FRONTEND noninteractive
 
 EXPOSE 8080
 COPY src /src
